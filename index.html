@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>🌟 Quiz App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="confettiCanvas"></canvas>
+  <div class="container">
+    <h1>🌟 Welcome to the Quiz App 🌟</h1>
+    
+    <div id="userForm">
+      <h2>Enter Your Details</h2>
+      <input type="text" id="userName" placeholder="Enter your name" required><br>
+      <input type="text" id="regNumber" placeholder="Register Number" required><br>
+      <select id="courseYear" required>
+        <option value="">YEAR</option>
+        <option value="1st Year">1st Year</option>
+        <option value="2nd Year">2nd Year</option>
+        <option value="3rd Year">3rd Year</option>
+        <option value="4th Year">4th Year</option>
+      </select><br>
+      <select id="course" required>
+        <option value="">-- Select Course --</option>
+        <option value="IT">IT</option>
+        <option value="CSE">CSE</option>
+        <option value="ECE">ECE</option>
+        <option value="EEE">EEE</option>
+        <option value="MECH">MECH</option>
+      </select><br>
+      <button onclick="startQuiz()">Start Quiz</button>
+    </div>
+
+    <div class="quiz-box" id="quizBox" style="display: none;">
+      <div class="header">
+        <h1>Online Quiz</h1>
+        <div class="progress-container"><div class="progress-bar" id="progressBar"></div></div>
+      </div>
+      <div class="timer">⏱️ Time Left: <span id="timer">15</span>s</div>
+      <div id="quiz">
+        <h2 id="question">Loading...</h2>
+        <div class="options">
+          <button class="option" id="a"></button>
+          <button class="option" id="b"></button>
+          <button class="option" id="c"></button>
+          <button class="option" id="d"></button>
+        </div>
+        <button id="nextBtn">Next →</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

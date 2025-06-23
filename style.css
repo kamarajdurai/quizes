@@ -1,0 +1,228 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(120deg, #667eea, #764ba2);
+  color: white;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* User Info Form */
+#userForm {
+  background-color: #1e1e2f;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+#userForm h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+#userForm input,
+#userForm select {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+}
+
+#userForm select {
+  background-color: white;
+  color: #333;
+}
+
+#userForm button {
+  padding: 12px 16px;
+  font-size: 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#userForm button:hover {
+  background-color: #388e3c;
+}
+
+/* Quiz Box */
+.quiz-box {
+  background-color: #1e1e2f;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.progress-container {
+  background-color: #444;
+  height: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.progress-bar {
+  background-color: limegreen;
+  height: 10px;
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
+.timer {
+  text-align: right;
+  margin-bottom: 15px;
+  font-weight: bold;
+  font-size: 16px;
+  color: #ffcccb;
+}
+
+#question {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.options button {
+  background-color: #2d2d44;
+  color: white;
+  border: none;
+  padding: 12px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.2s;
+}
+
+.options button:hover {
+  background-color: #4c4c6d;
+}
+
+.options button.selected {
+  background-color: #4caf50;
+}
+
+#nextBtn,
+.result button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px 16px;
+  font-size: 16px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#nextBtn:hover,
+.result button:hover {
+  background-color: #2980b9;
+}
+
+.result {
+  text-align: center;
+}
+
+.result h2 {
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+
+.result p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.medal {
+  margin-right: 10px;
+}
+
+#confettiCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 999;
+}
+
+@media screen and (max-width: 480px) {
+  .quiz-box {
+    padding: 20px;
+  }
+
+  .options button,
+  #userForm input,
+  #userForm select {
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+
+  #nextBtn,
+  .result button,
+  #userForm button {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+/* Leaderboard Display */
+.leaderboard {
+  background-color: #2a2a40;
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 20px;
+  color: white;
+  text-align: left;
+}
+
+.leaderboard h3 {
+  color: #f9d342;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.leaderboard ol {
+  list-style: none;
+  padding-left: 0;
+}
+
+.leaderboard li {
+  padding: 6px 0;
+  border-bottom: 1px solid #444;
+  font-size: 16px;
+}
